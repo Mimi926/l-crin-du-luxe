@@ -6,6 +6,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Salons from "./pages/Salons";
 import SalonDetail from "./pages/SalonDetail";
+import Auth from "./pages/Auth";
+import ClientDashboard from "./pages/ClientDashboard";
+import SalonDashboard from "./pages/SalonDashboard";
+import AdminDashboard from "./pages/AdminDashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,6 +24,10 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/salons" element={<Salons />} />
           <Route path="/salon/:id" element={<SalonDetail />} />
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/client" element={<ClientDashboard />} />
+          <Route path="/salon-dashboard" element={<SalonDashboard />} />
+          <Route path="/admin" element={<AdminDashboard />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
